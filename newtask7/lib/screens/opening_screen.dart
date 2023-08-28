@@ -2,8 +2,43 @@ import 'package:flutter/material.dart';
 import 'package:newtask7/screens/login_screen.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
-class OpeningScreen extends StatelessWidget {
+class OpeningScreen extends StatefulWidget {
   const OpeningScreen({super.key});
+
+  @override
+  State<OpeningScreen> createState() => _OpeningScreenState();
+}
+
+class _OpeningScreenState extends State<OpeningScreen> with TickerProviderStateMixin {
+
+  AnimationController? animationController;
+  Animation<double>? fadingAnimation ;
+  late  AnimationController _slidLogoController;
+
+  
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 950));
+    fadingAnimation = Tween<double>(begin: 0.15 ,end: 1).animate(animationController!);
+ 
+     animationController?.repeat(reverse: true);
+//////////////////////////////////////////////////////
+
+    _slidLogoController = AnimationController(vsync: this , duration: Duration(seconds: 4));
+
+    _slidLogoController.forward();
+
+
+  }
+
+  @override
+  void dispose() {
+    animationController?.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,21 +57,28 @@ class OpeningScreen extends StatelessWidget {
               height: MediaQuery.of(context).size.height * 0.3,
             ),
 
-            Image.asset(
-              'images/image2.png',
-              height: MediaQuery.of(context).size.height * 0.2,
+            SlideTransition(
+              position: Tween<Offset>(begin: Offset(0, -1) , end: Offset(0, 0)).animate(_slidLogoController),
+              // <Offset>(begin: Offset(0, -2)  ,end: Offset(0, 0)) .animate!_slidLogoController),
+              child: Image.asset(
+                'images/image2.png',
+                height: MediaQuery.of(context).size.height * 0.2,
+              ),
             ),
 
-            const Text(
-              "ITI Quiz App",
-              style: TextStyle(
-                // GoogleFonts.dancingScript(fontSize: 50, color: Colors.white),
-                fontFamily: 'Bradley Hand ITC',
-                // fontFamily: 'fonts/Pacifico.ttf',
-                fontSize: 40,
-                color: Colors.yellow,
-                fontWeight: FontWeight.bold,
-              ),
+            FadeTransition(
+              opacity: fadingAnimation!,
+              child: Text(
+                    "ITI Quiz App",
+                    style: TextStyle(
+                      // GoogleFonts.dancingScript(fontSize: 50, color: Colors.white),
+                      fontFamily: 'Bradley Hand ITC',
+                      // fontFamily: 'fonts/Pacifico.ttf',
+                      fontSize: 40,
+                      color: Colors.yellow,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
             ),
 
             const SizedBox(

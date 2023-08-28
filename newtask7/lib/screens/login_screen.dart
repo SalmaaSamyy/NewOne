@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:newtask7/Global/quizz_data.dart';
 import 'package:newtask7/screens/category_screen.dart';
+import 'package:shimmer/shimmer.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -91,11 +92,24 @@ class _LoginScreenState extends State<LoginScreen> {
                               height: MediaQuery.of(context).size.height * 0.01,
                               // width: MediaQuery.of(context).size.width,
                             ),
-                            const Text(
-                              "Login",
-                              style: TextStyle(
-                                fontSize: 32,
-                                fontWeight: FontWeight.w600,
+                            const Shimmer(
+                              // period: Duration(milliseconds: 9500),
+
+                              gradient: LinearGradient(
+                                colors: [Color.fromARGB(255, 95, 92, 92),
+                                 Color.fromARGB(255, 245, 245, 245),
+                                  Color.fromARGB(255, 224, 224, 224)],
+                                begin: Alignment(-1.0, -0.6),
+                                end: Alignment(2.0, 0.5),
+                                stops: [0, 0.5, 1], 
+                              ),
+                              child: Text(
+                                "Login",
+                                
+                                style: TextStyle(
+                                  fontSize: 32,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                             SizedBox(
