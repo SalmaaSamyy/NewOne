@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task8/counter.dart';
 import 'package:task8/cubits/cubit/changeSelectedValue/change_selected_value_cubit.dart';
 import 'package:task8/cubits/cubit/counter_cubit.dart';
+import 'package:task8/cubits/cubit/radioSelected/radio_selected_cubit.dart';
 import 'package:task8/cubits/cubit/replaceUI/replace_ui_cubit.dart';
 import 'package:task8/cubits/cubit/shawHidePass/show_hide_password_cubit.dart';
 import 'package:task8/taskk8.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider<ReplaceUiCubit>(
         create: (BuildContext context) => ReplaceUiCubit(),
+        ),
+        BlocProvider<RadioSelectedCubit>(
+        create: (BuildContext context) => RadioSelectedCubit(),
         ),
       ],
       

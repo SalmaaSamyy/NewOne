@@ -8,7 +8,7 @@ class ChangeSelectedValueCubit extends Cubit<ChangeSelectedValueState> {
 
   int selectedIndex =0;
   
-  void ChangeIndex(int index){
+  void changeIndex(int index){
     selectedIndex = index;
     emit(ChangeSelectedValueInitial());
   }

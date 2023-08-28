@@ -6,15 +6,15 @@ part 'replace_ui_state.dart';
 class ReplaceUiCubit extends Cubit<ReplaceUiState> {
   ReplaceUiCubit() : super(ReplaceUiInitial());
 
-   ShowText(){
+   void showText(){
     emit(ShowText());
   }
 
-  ShowImage(){
+  void showImage(){
     emit(ShowImage());
   }
 
-  ShowCircle(){
+  void showCircle(){
     emit(ShowCircle());
   }
 }
