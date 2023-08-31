@@ -79,16 +79,6 @@ class FirstScreen extends StatelessWidget {
                     'Latest News',
                     style: GoogleFonts.tinos(color: Colors.black, fontSize: 20,
                       fontWeight: FontWeight.bold,) ,
-                    // style:
-                  // GoogleFonts.dancingScript(fontSize: 50, color: Colors.white),
-                    // style: GoogleFonts.NewYorkSmall(),
-
-                    // style: TextStyle(
-                    //   color: Colors.black,
-                    //   fontSize: 20,
-                    //   fontWeight: FontWeight.bold,
-                    //   fontFamily: "New York Small",
-                    // ),
                   ),
                   
                   Spacer(),
@@ -148,25 +138,6 @@ class FirstScreen extends StatelessWidget {
                 ),
 
               ],
-              // children: List.generate(20, (index) {
-              //   return Padding(
-              //     padding: const EdgeInsets.symmetric(horizontal: 11 ,vertical: 10),
-              //     child: Container(
-              //       decoration:BoxDecoration(
-              //           color: Colors.red,
-              //           borderRadius: BorderRadius.circular(20)
-              //       ),
-                    
-              //       child: TextButton(
-              //         onPressed: () {  },
-              //         child:  Text('healthly',
-              //           style: TextStyle(
-              //               color: Colors.white
-              //           ),),
-              //       ),
-              //     ),
-              //   );
-              // }),
             ),
           ),
         ),
@@ -193,34 +164,6 @@ class FirstScreen extends StatelessWidget {
           ],
         ),
       ),
-      
-          //////////////////////////////////////////////////////////////////
-          ////////////////////////////////////////////////////////////////
-
-      // body:
-      //  SingleChildScrollView(
-      //   child: Column(
-          
-      //     mainAxisAlignment: MainAxisAlignment.center,
-      //     children: [
-            
-      //       Padding(
-      //         padding: const EdgeInsets.all(8.0),
-      //         child: Row(
-      //           children: [
-      //             TextFormField(
-      //               decoration: InputDecoration(
-      //                 labelText: "Dogecoin to the Moon...",
-      //                 // fillColor: Colors.black,
-      //                 suffixIcon: Icon(Icons.search),
-      //               ),
-      //             ),
-      //           ],
-      //         ),
-      //       ),
-      //     ],
-      //   ),
-      // ),
       floatingActionButton: Align(
         alignment: Alignment.bottomCenter,
         child: Container(
@@ -250,9 +193,6 @@ class FirstScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  //   // return const Secondscreen();
-                  // },),);
                 },
                 child: const Column(
                   children: [
@@ -267,9 +207,6 @@ class FirstScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  //   // return const ThirdtScreen();
-                  // }));
                 },
                 child: const Column(
                   children: [
