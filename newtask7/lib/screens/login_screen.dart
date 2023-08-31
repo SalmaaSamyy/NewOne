@@ -221,23 +221,23 @@ class _LoginScreenState extends State<LoginScreen> {
                                       vertical:
                                           MediaQuery.of(context).size.height *
                                               0.01),
-                                  hintText: 'Enter your Email',
-                                  hintStyle: const TextStyle(
-                                    color: Color(0xff635b5b),
-                                    fontSize: 25,
-                                  ),
-                                  prefixIcon: const Icon(
-                                    Icons.mail,
-                                    size: 40,
-                                  ),
-                                  filled: true,
-                                  fillColor: Colors.white,
-                                  enabledBorder: OutlineInputBorder(
-                                    // borderSide: BorderSide(
-                                    //   width: MediaQuery.of(context).size.height *
-                                    //       0.003,
-                                    // ),
-                                    borderRadius: BorderRadius.circular(33),
+                                    hintText: 'Enter your Email',
+                                    hintStyle: const TextStyle(
+                                      color: Color(0xff635b5b),
+                                      fontSize: 25,
+                                    ),
+                                    prefixIcon: const Icon(
+                                      Icons.mail,
+                                      size: 40,
+                                    ),
+                                    filled: true,
+                                    fillColor: Colors.white,
+                                    enabledBorder: OutlineInputBorder(
+                                      // borderSide: BorderSide(
+                                      //   width: MediaQuery.of(context).size.height *
+                                      //       0.003,
+                                      // ),
+                                      borderRadius: BorderRadius.circular(33),
                                   ),
                                 ),
                               ),
