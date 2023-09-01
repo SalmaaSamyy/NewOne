@@ -131,11 +131,12 @@ class Secondscreen extends StatelessWidget {
                                         // padding: 30,
                                         height: 170,
                                         
-                                        child: GridView.extent(
-                                          // crossAxisCount: 3,
+                                        child: GridView.count(
+                                          crossAxisCount: 3,
+                                          childAspectRatio: 2.5 ,
                                           // crossAxisSpacing: 5,
                                           // mainAxisSpacing: 5,
-                                          maxCrossAxisExtent: 200,
+                                          // maxCrossAxisExtent: 200,
                                           children: [
                                             
                                             for(int j =0 ; j<list2.length ;j++)
@@ -153,7 +154,7 @@ class Secondscreen extends StatelessWidget {
                                               child:                                              
                                                 Text(list2[j] ,
                                                 style: TextStyle(
-                                                    fontSize: 20,
+                                                    fontSize: 11,
                                                     color: Colors.black,
                                                 ),                                            
                                                   ),    
