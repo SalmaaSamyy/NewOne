@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/glopal.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newsapp/glopal.dart';
 import 'package:newsapp/screens/second_screen.dart';
 
 class FirstScreen extends StatelessWidget {
@@ -68,7 +68,7 @@ class FirstScreen extends StatelessWidget {
           height: MediaQuery.of(context).size.height *61/800,
       
           child:  Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: SizedBox(
       
               child: Row(
@@ -91,15 +91,15 @@ class FirstScreen extends StatelessWidget {
                     // ),
                   ),
                   
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+                  const Text(
                     'See all',
                     style: TextStyle(color: Colors.blueAccent),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Icon(
+                  const Icon(
                     Icons.keyboard_backspace,
                     color: Colors.blueAccent,
                   )
@@ -143,7 +143,7 @@ class FirstScreen extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {  },
                       child: Text(list1[i],
-                      style: TextStyle(color: Colors.white),)),
+                      style: const TextStyle(color: Colors.white),)),
                   ),
                 ),
 
@@ -289,7 +289,7 @@ class FirstScreen extends StatelessWidget {
               InkWell(
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return Secondscreen();
+                    return const Secondscreen();
                   }));
                 },
                 child: const Column(
